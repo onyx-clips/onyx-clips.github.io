@@ -18,6 +18,8 @@
   <link rel="alternate" hreflang="x-default" href="https://onyx-clips.github.io/">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/site.css">
+  <link rel="expect" href="#foot" blocking="render">
+  <script src="/js/lang.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">Zum Inhalt</a>
@@ -63,7 +65,7 @@
             </a>
             <a class="btn btn-glass btn-big" href="#funktionen">So funktioniert's</a>
           </div>
-          <p class="fine" id="releaseLine" data-static>Version 0.5.0 · 104 MB · Windows 10 und 11</p>
+          <p class="fine" id="releaseLine" data-static>Version 0.5.1 · 104 MB · Windows 10 und 11</p>
         </div>
         <div class="hero-phone">
           <div class="phone">
@@ -100,7 +102,7 @@
         <h2 class="chrome">Onyx in 36 Sekunden</h2>
       </div>
       <figure class="showcase-frame">
-        <video class="showcase-video" src="/media/showcase.mp4" poster="/media/showcase.jpg" muted loop playsinline preload="none"
+        <video class="showcase-video" src="/media/showcase.mp4?v=2" poster="/media/showcase.jpg?v=2" muted loop playsinline preload="none"
                aria-label="Onyx in 36 Sekunden: Aufnahme im Hintergrund, F9, Overlay, Bibliothek, Discord, Hochkant-Editor, Zeitreise und Clip-Jahr"></video>
       </figure>
     </section>
@@ -134,7 +136,7 @@
             <h3>Hochkant fürs TikTok</h3>
             <p>Im Editor einmal Hochkant an, und aus dem Querformat wird 9:16. Dazu Kürzen, Tempo von 0,25× bis 2×, eigene Musik und sechs Übergänge. Mehrere Clips lassen sich zu einem zusammensetzen.</p>
           </div>
-          <figure class="shot"><img src="/media/hochkant.jpg" alt="Der Clip-Editor mit Hochkant 9:16, Ausschnitt, Tempo und Ton" loading="lazy" width="1600" height="1000"></figure>
+          <figure class="shot"><img src="/media/hochkant.jpg?v=2" alt="Der Clip-Editor mit Hochkant 9:16, Ausschnitt, Tempo und Ton" loading="lazy" width="1600" height="1000"></figure>
         </article>
 
         <article class="feature is-flipped">
@@ -150,7 +152,7 @@
             <h3>Zeitreise</h3>
             <p>Alte Clips wiederentdecken: einer nach dem anderen, rechts Like, links weiter. Wie bei Tinder, nur mit deinen besten Momenten.</p>
           </div>
-          <figure class="shot"><img src="/media/zeitreise.jpg?v=2" alt="Die Zeitreise mit einem alten Clip, darunter die Knöpfe Nope, Like und Groß ansehen" loading="lazy" width="1200" height="1020"></figure>
+          <figure class="shot"><img src="/media/zeitreise.jpg?v=3" alt="Die Zeitreise mit einem alten Clip, darunter die Knöpfe Nope, Like und Groß ansehen" loading="lazy" width="1200" height="1020"></figure>
         </article>
 
         <article class="feature is-flipped">
@@ -251,12 +253,12 @@
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           Für Windows herunterladen
         </a>
-        <p class="fine" id="releaseLine2" data-static>Version 0.5.0 · 104 MB · Windows 10 und 11</p>
+        <p class="fine" id="releaseLine2" data-static>Version 0.5.1 · 104 MB · Windows 10 und 11</p>
       </div>
     </section>
   </main>
 
-  <footer class="foot">
+  <footer class="foot" id="foot">
     <div class="wrap foot-inner">
       <span>© <span id="year">2026</span> Onyx · Instant Replay für Windows</span>
       <nav aria-label="Rechtliches"><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></nav>

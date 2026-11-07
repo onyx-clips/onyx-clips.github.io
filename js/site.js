@@ -25,9 +25,9 @@
     });
   }).catch(function () { /* the button still works */ });
 
-  // Sections rise in once
+  // Sections rise in once (not after changing the language: that page was seen already, lang.js)
   var targets = document.querySelectorAll('.step, .showcase-frame, .feature, .perf-inner, .trust-card, .faq details, .download-card, .more li');
-  if ('IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window && !document.documentElement.classList.contains('lang-switched')) {
     var seen = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (!e.isIntersecting) return;
