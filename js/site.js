@@ -6,13 +6,19 @@
   var year = document.getElementById('year');
   if (year) year.textContent = String(new Date().getFullYear());
 
-  // "Version 0.4.0 · 74 MB · Windows 10 und 11" from the server. On GitHub Pages
+  // "Version 0.4.0 · 74 MB · Windows 10 and 11" from the server, in the page's language. On GitHub Pages
   // tools/server/build-pages.ps1 writes it into the page (data-static) and there is nothing to ask.
+  var lang = (document.documentElement.lang || 'en').slice(0, 2);
+  var LINE = {
+    de: { version: 'Version', windows: 'Windows 10 und 11', locale: 'de-DE' },
+    en: { version: 'Version', windows: 'Windows 10 and 11', locale: 'en-US' },
+    ru: { version: 'Версия', windows: 'Windows 10 и 11', locale: 'ru-RU' }
+  }[lang] || { version: 'Version', windows: 'Windows 10 and 11', locale: 'en-US' };
   var first = document.getElementById('releaseLine');
   if (!(first && first.hasAttribute('data-static'))) fetch('/api/release', { cache: 'no-store' }).then(function (r) { return r.json(); }).then(function (r) {
     if (!r || !r.version) return;
-    var mb = r.size ? ' · ' + (r.size / 1048576).toLocaleString('de-DE', { maximumFractionDigits: 0 }) + ' MB' : '';
-    var line = 'Version ' + r.version + mb + ' · Windows 10 und 11';
+    var mb = r.size ? ' · ' + (r.size / 1048576).toLocaleString(LINE.locale, { maximumFractionDigits: 0 }) + ' MB' : '';
+    var line = LINE.version + ' ' + r.version + mb + ' · ' + LINE.windows;
     ['releaseLine', 'releaseLine2'].forEach(function (id) {
       var el = document.getElementById(id);
       if (el) el.textContent = line;

@@ -1,25 +1,30 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://onyx-clips.duckdns.org:8443; object-src 'none'; base-uri 'none'; form-action 'self' https://onyx-clips.duckdns.org:8443">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Onyx – Instant Replay für Windows</title>
-  <meta name="description" content="Onyx nimmt im Hintergrund mit. Du drückst F9 nach dem Play, und die letzten 60 Sekunden sind gespeichert. Kein Account, keine Cloud.">
+  <title>Onyx – Instant replay for Windows</title>
+  <meta name="description" content="Onyx records in the background. Press F9 after the play and the last 60 seconds are saved. No account, no cloud.">
   <meta name="theme-color" content="#050506">
-  <meta property="og:title" content="Onyx – Instant Replay für Windows">
-  <meta property="og:description" content="F9 nach dem Play, die letzten 60 Sekunden sind gespeichert. Overlay im Spiel, Discord unter 10 MB, Hochkant fürs TikTok.">
+  <meta property="og:title" content="Onyx – Instant replay for Windows">
+  <meta property="og:description" content="F9 after the play, the last 60 seconds are saved. Overlay in game, fits Discord's upload limit, vertical for TikTok.">
   <meta property="og:image" content="/media/hero-poster.jpg">
+  <meta property="og:locale" content="en_US">
+  <link rel="alternate" hreflang="en" href="https://onyx-clips.github.io/">
+  <link rel="alternate" hreflang="de" href="https://onyx-clips.github.io/de/">
+  <link rel="alternate" hreflang="ru" href="https://onyx-clips.github.io/ru/">
+  <link rel="alternate" hreflang="x-default" href="https://onyx-clips.github.io/">
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
-  <a class="skip" href="#main">Zum Inhalt</a>
+  <a class="skip" href="#main">Skip to content</a>
 
   <header class="top" id="top">
     <div class="wrap top-inner">
-      <a class="brand" href="/" aria-label="Onyx Startseite">
+      <a class="brand" href="/" aria-label="Onyx home">
         <svg class="gem" viewBox="0 0 24 24" aria-hidden="true">
           <defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#7d7d86"/></linearGradient></defs>
           <path d="M12 2.2 21 9.1 12 21.8 3 9.1Z" fill="url(#g1)"/>
@@ -28,10 +33,15 @@
         </svg>
         <span>Onyx</span>
       </a>
-      <nav class="nav" aria-label="Seiten">
-        <a href="#funktionen">Funktionen</a>
-        <a href="#leistung">Leistung</a>
-        <a href="#faq">Fragen</a>
+      <nav class="nav" aria-label="Sections">
+        <a href="#features">Features</a>
+        <a href="#performance">Performance</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <nav class="langs" aria-label="Language">
+        <a href="/" lang="en" hreflang="en" aria-current="page">EN</a>
+        <a href="/de/" lang="de" hreflang="de" title="Deutsch">DE</a>
+        <a href="/ru/" lang="ru" hreflang="ru" title="Русский">RU</a>
       </nav>
       <a class="btn btn-small" href="https://github.com/onyx-clips/onyx-clips.github.io/releases/latest/download/Onyx-Setup.exe" data-download>Download</a>
     </div>
@@ -43,21 +53,21 @@
       <div class="beams" aria-hidden="true"><span></span><span></span></div>
       <div class="wrap hero-inner">
         <div class="hero-text">
-          <span class="kicker">Instant Replay für Windows</span>
-          <h1 class="chrome">Kein Clip?<br>Dann ist es nie passiert.</h1>
-          <p class="lead">Onyx nimmt im Hintergrund mit. Du drückst <kbd>F9</kbd> nach dem Play, und die letzten 60&nbsp;Sekunden sind gespeichert. Kein Account, keine Cloud.</p>
+          <span class="kicker">Instant replay for Windows</span>
+          <h1 class="chrome">No clip?<br>Then it never happened.</h1>
+          <p class="lead">Onyx records in the background. Hit <kbd>F9</kbd> after the play, and the last 60&nbsp;seconds are saved. No account, no cloud.</p>
           <div class="cta">
             <a class="btn btn-primary btn-big" href="https://github.com/onyx-clips/onyx-clips.github.io/releases/latest/download/Onyx-Setup.exe" data-download>
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Für Windows herunterladen
+              Download for Windows
             </a>
-            <a class="btn btn-glass btn-big" href="#funktionen">So funktioniert's</a>
+            <a class="btn btn-glass btn-big" href="#features">How it works</a>
           </div>
-          <p class="fine" id="releaseLine" data-static>Version 0.4.8 · 104 MB · Windows 10 und 11</p>
+          <p class="fine" id="releaseLine" data-static>Version 0.5.0 · 104 MB · Windows 10 and 11</p>
         </div>
         <div class="hero-phone">
           <div class="phone">
-            <video class="phone-video" src="/media/hero.mp4" poster="/media/hero-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Onyx in 24 Sekunden"></video>
+            <video class="phone-video" src="/media/hero.mp4" poster="/media/hero-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Onyx in 24 seconds"></video>
           </div>
           <div class="phone-glow" aria-hidden="true"></div>
         </div>
@@ -65,157 +75,164 @@
     </section>
 
     <!-- Three steps -->
-    <section class="steps wrap" aria-label="So einfach geht's">
+    <section class="steps wrap" aria-label="That simple">
       <div class="step">
         <span class="step-num">01</span>
-        <h3>Onyx läuft mit</h3>
-        <p>Im Infobereich, während du spielst. Die letzten Sekunden liegen immer bereit, auf Wunsch 15 Sekunden bis 5 Minuten.</p>
+        <h3>Onyx runs along</h3>
+        <p>In the system tray while you play. The last seconds are always ready, anything from 10&nbsp;seconds to 10&nbsp;minutes.</p>
       </div>
       <div class="step">
         <span class="step-num">02</span>
-        <h3>F9 nach dem Play</h3>
-        <p>Ein Tastendruck, Maus&nbsp;4/5 oder der Sprachbefehl „Mach ein Clip“. Ein kurzer Hinweis oben rechts, das Spiel läuft weiter.</p>
+        <h3>F9 after the play</h3>
+        <p>A key press, mouse button&nbsp;4/5 or the voice command “Clip that”. A short notice at the top right, the game keeps running.</p>
       </div>
       <div class="step">
         <span class="step-num">03</span>
-        <h3>Teilen</h3>
-        <p>Im Overlay mit <kbd>Alt</kbd>+<kbd>C</kbd> ansehen, für Discord kopieren oder hochkant schneiden fürs TikTok.</p>
+        <h3>Share</h3>
+        <p>Watch it in the overlay with <kbd>Alt</kbd>+<kbd>C</kbd>, copy it for Discord or cut it vertical for TikTok.</p>
       </div>
     </section>
 
     <!-- Showcase: tools/showcase (rendered from the real app with test data) -->
-    <section class="showcase wrap" id="video" aria-label="Onyx im Video">
+    <section class="showcase wrap" id="video" aria-label="Onyx on video">
       <div class="section-head">
-        <span class="kicker">Kurz gezeigt</span>
-        <h2 class="chrome">Onyx in 36 Sekunden</h2>
+        <span class="kicker">Quick look</span>
+        <h2 class="chrome">Onyx in 36 seconds</h2>
       </div>
       <figure class="showcase-frame">
         <video class="showcase-video" src="/media/showcase.mp4" poster="/media/showcase.jpg" muted loop playsinline preload="none"
-               aria-label="Onyx in 36 Sekunden: Aufnahme im Hintergrund, F9, Overlay, Bibliothek, Discord, Hochkant-Editor, Zeitreise und Clip-Jahr"></video>
+               aria-label="Onyx in 36 seconds: recording in the background, F9, overlay, library, Discord, vertical editor, Time Travel and clip year"></video>
       </figure>
     </section>
 
     <!-- Features -->
-    <section class="features" id="funktionen">
+    <section class="features" id="features">
       <div class="wrap">
         <div class="section-head">
-          <span class="kicker">Funktionen</span>
-          <h2 class="chrome">Alles, was nach dem Play kommt</h2>
+          <span class="kicker">Features</span>
+          <h2 class="chrome">Everything that comes after the play</h2>
         </div>
 
         <article class="feature">
           <div class="feature-text">
-            <h3>Deine Clips direkt im Spiel</h3>
-            <p><kbd>Alt</kbd>+<kbd>C</kbd> öffnet das Overlay über dem Spiel: dein neuester Clip groß, die letzten daneben. Ansehen, für Discord kopieren, mit <kbd>Esc</kbd> zurück ins Spiel. Onyx schleust dafür nichts ins Spiel ein.</p>
+            <h3>Your clips right in the game</h3>
+            <p><kbd>Alt</kbd>+<kbd>C</kbd> opens the overlay over the game: your newest clip big, the latest ones next to it. Watch, copy for Discord, <kbd>Esc</kbd> takes you back to the game. Onyx injects nothing into the game for this.</p>
           </div>
-          <figure class="shot"><img src="/media/overlay.jpg" alt="Das Onyx-Overlay über dem Spiel mit dem neuesten Clip" loading="lazy" width="1600" height="1200"></figure>
+          <figure class="shot"><img src="/media/overlay.jpg" alt="The Onyx overlay over the game with the newest clip" loading="lazy" width="1600" height="1200"></figure>
         </article>
 
         <article class="feature is-flipped">
           <div class="feature-text">
-            <h3>Ab in Discord, unter 10&nbsp;MB</h3>
-            <p>„Für Discord kopieren“, und Onyx bringt den Clip automatisch unter dein Upload-Limit: 10&nbsp;MB ohne Nitro, 50 oder 500&nbsp;MB mit Nitro. Dann in Discord nur noch <kbd>Strg</kbd>+<kbd>V</kbd>.</p>
+            <h3>Straight into Discord, under your limit</h3>
+            <p>“Copy for Discord”, and Onyx automatically brings the clip under your upload limit: 20&nbsp;MB without Nitro, 50&nbsp;MB with Nitro Basic, 1&nbsp;GB with Nitro. Then just <kbd>Ctrl</kbd>+<kbd>V</kbd> in Discord.</p>
           </div>
-          <figure class="shot shot-tall"><img src="/media/discord.jpg" alt="Clip-Details mit dem Knopf „Für Discord kopieren“" loading="lazy" width="600" height="1014"></figure>
+          <figure class="shot shot-tall"><img src="/media/discord.jpg" alt="Clip details with the button to copy it for Discord" loading="lazy" width="600" height="1014"></figure>
         </article>
 
         <article class="feature">
           <div class="feature-text">
-            <h3>Hochkant fürs TikTok</h3>
-            <p>Im Editor einmal Hochkant an, und aus dem Querformat wird 9:16. Dazu Kürzen, Tempo von 0,25× bis 2×, eigene Musik und sechs Übergänge. Mehrere Clips lassen sich zu einem zusammensetzen.</p>
+            <h3>Vertical for TikTok</h3>
+            <p>Switch on vertical in the editor once, and the landscape clip becomes 9:16. Plus trimming, speed from 0.25× to 2×, your own music and six transitions. Several clips can be combined into one.</p>
           </div>
-          <figure class="shot"><img src="/media/hochkant.jpg" alt="Der Clip-Editor mit Hochkant 9:16, Ausschnitt, Tempo und Ton" loading="lazy" width="1600" height="1000"></figure>
+          <figure class="shot"><img src="/media/hochkant.jpg" alt="The clip editor with vertical 9:16, crop, speed and audio" loading="lazy" width="1600" height="1000"></figure>
         </article>
 
         <article class="feature is-flipped">
           <div class="feature-text">
-            <h3>Keine Hand frei? Sag es einfach</h3>
-            <p>Mit dem Sprachbefehl reicht „Mach ein Clip“ ins Mikrofon. Die Erkennung läuft nur auf deinem PC, offline. Den Satz kannst du selbst bestimmen und direkt ausprobieren.</p>
+            <h3>Hands full? Just say it</h3>
+            <p>With the voice command, “Clip that” into the mic is enough. Recognition runs only on your PC, offline. You pick the phrase yourself and can try it right away.</p>
           </div>
-          <figure class="shot"><img src="/media/voice.jpg" alt="Einstellungen: Tastenkürzel und Sprachbefehl" loading="lazy" width="900" height="388"></figure>
+          <figure class="shot"><img src="/media/voice.jpg" alt="Settings: hotkeys and voice command" loading="lazy" width="900" height="388"></figure>
         </article>
 
         <article class="feature">
           <div class="feature-text">
-            <h3>Zeitreise</h3>
-            <p>Alte Clips wiederentdecken: einer nach dem anderen, rechts Like, links weiter. Wie bei Tinder, nur mit deinen besten Momenten.</p>
+            <h3>Time Travel</h3>
+            <p>Rediscover old clips: one after another, right for Like, left to move on. Like Tinder, just with your best moments.</p>
           </div>
-          <figure class="shot"><img src="/media/zeitreise.jpg?v=2" alt="Die Zeitreise mit einem alten Clip, darunter die Knöpfe Nope, Like und Groß ansehen" loading="lazy" width="1200" height="1020"></figure>
+          <figure class="shot"><img src="/media/zeitreise.jpg?v=2" alt="Time Travel with an old clip and the buttons Nope, Like and view full size below it" loading="lazy" width="1200" height="1020"></figure>
         </article>
 
         <article class="feature is-flipped">
           <div class="feature-text">
-            <h3>Dein Clip-Jahr</h3>
-            <p>Jeder Tag mit Clips auf einen Blick, deine längste Serie und dein bester Tag. Gleich auf der Startseite.</p>
+            <h3>Your clip year</h3>
+            <p>Every day with clips at a glance, your longest streak and your best day. Right on the home page.</p>
           </div>
-          <figure class="shot"><img src="/media/clipjahr.jpg" alt="Das Clip-Jahr mit Kalender und Statistik" loading="lazy" width="1200" height="434"></figure>
+          <figure class="shot"><img src="/media/clipjahr.jpg" alt="The clip year with calendar and statistics" loading="lazy" width="1200" height="434"></figure>
         </article>
 
-        <ul class="more" aria-label="Außerdem">
-          <li><b>Nur Spielsound</b> ohne Discord und Musik im Clip</li>
-          <li><b>Mikrofon</b> auf eigener Spur, mit Rauschunterdrückung</li>
-          <li><b>Rückblick</b> nach dem Spielen mit deinen neuen Clips</li>
-          <li><b>Unsichtbar in Streams</b>: Hinweise und Overlay siehst nur du</li>
-          <li><b>Aufräumen</b> nach Alter oder Speicher, Favoriten bleiben</li>
-          <li><b>Mehrere auswählen</b> und auf einmal löschen</li>
+        <ul class="more" aria-label="Also">
+          <li><b>Any clip length</b> from 10 seconds to 10 minutes</li>
+          <li><b>Game audio only</b> without Discord and music in the clip</li>
+          <li><b>Microphone</b> on its own track, with noise suppression</li>
+          <li><b>Recap</b> after playing with your new clips</li>
+          <li><b>Invisible in streams</b>: only you see notices and the overlay</li>
+          <li><b>Clean-up</b> by age or storage, favorites stay</li>
+          <li><b>Select several</b> and delete them at once</li>
+          <li><b>Your own sound</b> after saving, or one of the built-in ones</li>
+          <li><b>English, German, Russian</b>: pick yours at the first start</li>
         </ul>
       </div>
     </section>
 
     <!-- Performance -->
-    <section class="perf" id="leistung">
+    <section class="perf" id="performance">
       <div class="wrap perf-inner">
         <div class="perf-text">
-          <span class="kicker">Leistung</span>
-          <h2 class="chrome">Schwacher PC? Kein Problem.</h2>
-          <p>Onyx nimmt mit dem Encoder deiner Grafikkarte auf, nicht mit dem Prozessor. Den wählt Onyx selbst: NVENC bei NVIDIA, AMF bei AMD, Quick Sync bei Intel.</p>
-          <p>Speichern rechnet nichts neu: Die Aufnahme liegt in kurzen Stücken bereit und wird nur zusammengesetzt. Dein Spiel läuft einfach weiter.</p>
-          <p>Wird es trotzdem eng, drehst du Auflösung und Bildrate herunter, zum Beispiel auf 720p und 30&nbsp;FPS.</p>
-          <div class="chips" aria-label="Unterstützte Grafikkarten">
+          <span class="kicker">Performance</span>
+          <h2 class="chrome">Weak PC? No problem.</h2>
+          <p>Onyx records with your graphics card's encoder, not with the processor. Onyx picks it by itself: NVENC on NVIDIA, AMF on AMD, Quick Sync on Intel.</p>
+          <p>Saving re-encodes nothing: the recording waits in short pieces and is only put together. Your game just keeps running.</p>
+          <p>If it still gets tight, turn down resolution and frame rate, for example to 720p and 30&nbsp;FPS.</p>
+          <div class="chips" aria-label="Supported graphics cards">
             <span class="chip">NVIDIA · NVENC</span><span class="chip">AMD · AMF</span><span class="chip">Intel · Quick Sync</span>
           </div>
         </div>
-        <figure class="shot"><img src="/media/settings.jpg" alt="Aufnahme-Einstellungen mit Encoder „Automatisch (NVENC)“" loading="lazy" width="900" height="692"></figure>
+        <figure class="shot"><img src="/media/settings.jpg" alt="Recording settings with the encoder on automatic (NVENC)" loading="lazy" width="900" height="692"></figure>
       </div>
     </section>
 
     <!-- Trust -->
     <section class="trust wrap">
       <div class="trust-card">
-        <h2 class="chrome">Kein Account. Keine Cloud.</h2>
-        <p>Deine Clips bleiben auf deinem PC, im Ordner <span class="mono">Videos\Onyx</span>. Ins Internet geht nur die Update-Prüfung und, abschaltbar, eine anonyme Nutzungsstatistik: eine zufällige ID, die Version und wie viele Clips gespeichert wurden. Nie deine Clips, Namen oder Dateien.</p>
+        <h2 class="chrome">No account. No cloud.</h2>
+        <p>Your clips stay on your PC, in the folder <span class="mono">Videos\Onyx</span>. The only things that go online are the check for updates and messages and, if you leave them on, an anonymous usage statistic (a random ID, the version, how many clips were saved) and error reports without personal data. Never your clips, names or files.</p>
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="faq wrap" id="faq">
       <div class="section-head">
-        <span class="kicker">Fragen</span>
-        <h2 class="chrome">Gut zu wissen</h2>
+        <span class="kicker">Questions</span>
+        <h2 class="chrome">Good to know</h2>
       </div>
       <details>
-        <summary>Läuft Onyx auf meinem PC?</summary>
-        <p>Onyx braucht Windows 10 (64-Bit) oder Windows 11. Am besten mit einer Grafikkarte von NVIDIA, AMD oder Intel, dann nimmt sie auf und das Spiel merkt kaum etwas. Ohne passende Grafikkarte nimmt der Prozessor auf (x264).</p>
+        <summary>Does Onyx run on my PC?</summary>
+        <p>Onyx needs Windows 10 (64-bit) or Windows 11. Ideally with a graphics card from NVIDIA, AMD or Intel: then it does the recording and the game hardly notices. Without a suitable graphics card the processor records (x264).</p>
       </details>
       <details>
-        <summary>Mit welchen Spielen funktioniert das?</summary>
-        <p>Onyx nimmt deinen Bildschirm auf und erkennt das Spiel im Vordergrund. Es greift nicht ins Spiel ein und lädt nichts hinein, die Clips landen nach Spiel sortiert im Ordner.</p>
+        <summary>Which games does it work with?</summary>
+        <p>Onyx records your screen and detects the game in the foreground. It doesn't touch the game or load anything into it; the clips land in the folder, sorted by game.</p>
       </details>
       <details>
-        <summary>Brauche ich einen Account?</summary>
-        <p>Nein. Installieren, F9 drücken, fertig. Es gibt keine Anmeldung und keine Cloud.</p>
+        <summary>Do I need an account?</summary>
+        <p>No. Install, press F9, done. There is no sign-in and no cloud.</p>
       </details>
       <details>
-        <summary>Windows warnt beim Installieren. Ist das normal?</summary>
-        <p>Ja. Bei neuen Programmen ohne bekannte Signatur zeigt Windows „Der Computer wurde durch Windows geschützt“. Klick auf „Weitere Informationen“ und dann „Trotzdem ausführen“. Onyx installiert sich nur für deinen Benutzer und braucht keine Administratorrechte.</p>
+        <summary>Windows warns me when installing. Is that normal?</summary>
+        <p>Yes. For new programs without a well-known signature Windows shows “Windows protected your PC”. Click “More info” and then “Run anyway”. Onyx installs only for your user and needs no administrator rights.</p>
       </details>
       <details>
-        <summary>Wie kommen Updates?</summary>
-        <p>Onyx lädt neue Versionen im Hintergrund und installiert sie, wenn kein Spiel läuft. Jedes Update ist digital signiert und wird vor dem Start geprüft. In den Einstellungen unter „Updates“ kannst du das abschalten.</p>
+        <summary>How do updates arrive?</summary>
+        <p>Onyx downloads new versions in the background and installs them when no game is running. Every update is digitally signed and checked before it starts. You can switch this off in the settings under “Updates”.</p>
       </details>
       <details>
-        <summary>Wie werde ich Onyx wieder los?</summary>
-        <p>Windows-Einstellungen → Apps → Onyx → Deinstallieren. Deine Clips im Ordner <span class="mono">Videos\Onyx</span> bleiben dabei liegen.</p>
+        <summary>Which languages does Onyx speak?</summary>
+        <p>English, German and Russian. You pick one right at the first start and can change it any time in the settings under “General”.</p>
+      </details>
+      <details>
+        <summary>How do I get rid of Onyx?</summary>
+        <p>Windows Settings → Apps → Onyx → Uninstall. Your clips in the folder <span class="mono">Videos\Onyx</span> stay where they are.</p>
       </details>
     </section>
 
@@ -228,21 +245,21 @@
           <path d="M3 9.1h18L12 21.8Z" fill="#000" fill-opacity=".3"/>
           <path d="M8.2 9.1 12 2.2l3.8 6.9L12 21.8Z" fill="#fff" fill-opacity=".22"/>
         </svg>
-        <h2 class="chrome">Bereit für den nächsten Clutch?</h2>
-        <p class="lead">Lade Onyx herunter und drück nach dem nächsten Play einfach F9.</p>
+        <h2 class="chrome">Ready for the next clutch?</h2>
+        <p class="lead">Download Onyx and just press F9 after your next play.</p>
         <a class="btn btn-primary btn-big" href="https://github.com/onyx-clips/onyx-clips.github.io/releases/latest/download/Onyx-Setup.exe" data-download>
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Für Windows herunterladen
+          Download for Windows
         </a>
-        <p class="fine" id="releaseLine2" data-static>Version 0.4.8 · 104 MB · Windows 10 und 11</p>
+        <p class="fine" id="releaseLine2" data-static>Version 0.5.0 · 104 MB · Windows 10 and 11</p>
       </div>
     </section>
   </main>
 
   <footer class="foot">
     <div class="wrap foot-inner">
-      <span>© <span id="year">2026</span> Onyx · Instant Replay für Windows</span>
-      <nav aria-label="Rechtliches"><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz</a></nav>
+      <span>© <span id="year">2026</span> Onyx · Instant replay for Windows</span>
+      <nav aria-label="Legal"><a href="/imprint/">Legal notice</a><a href="/privacy/">Privacy</a></nav>
     </div>
   </footer>
 

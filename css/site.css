@@ -103,6 +103,12 @@ button.btn:disabled { opacity: 0.6; cursor: default; transform: none; }
 .nav { display: flex; gap: 26px; margin-left: auto; }
 .nav a { color: var(--text-2); text-decoration: none; font-size: 15px; transition: color 0.2s; }
 .nav a:hover { color: var(--text-1); }
+/* The language: English at /, German at /de/, Russian at /ru/ */
+.langs { display: flex; gap: 2px; padding: 3px; border-radius: 999px; background: rgba(255, 255, 255, 0.04); box-shadow: inset 0 0 0 1px var(--line); }
+.brand + .langs { margin-left: auto; }
+.langs a { padding: 6px 9px; border-radius: 999px; color: var(--text-3); text-decoration: none; font: 600 12px/1 var(--font-display); letter-spacing: 0.1em; transition: color 0.2s, background 0.2s; }
+.langs a:hover { color: var(--text-1); }
+.langs a[aria-current="page"] { color: var(--on-accent); background: var(--accent); }
 
 /* ───────── Hero ───────── */
 .hero { position: relative; overflow: hidden; padding: 72px 0 56px; }
@@ -238,7 +244,13 @@ details p { margin: 0 0 22px; color: var(--text-2); }
   .steps, .more { grid-template-columns: minmax(0, 1fr); }
   .nav { display: none; }
   .top .btn-small { margin-left: auto; }
+  .top .langs { margin-left: auto; }
+  .top .langs + .btn-small { margin-left: 0; }
   .trust-card { padding: 30px 22px; }
+}
+@media (max-width: 480px) {
+  .top-inner { gap: 12px; }
+  .brand span { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }

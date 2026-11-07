@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://onyx-clips.duckdns.org:8443; object-src 'none'; base-uri 'none'; form-action 'self' https://onyx-clips.duckdns.org:8443">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal notice – Onyx</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="/" aria-label="Onyx home">
+        <svg class="gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2 21 9.1 12 21.8 3 9.1Z" fill="#d9d9e0"/><path d="M3 9.1h18L12 21.8Z" fill="#000" fill-opacity=".3"/></svg>
+        <span>Onyx</span>
+      </a>
+      <nav class="langs" aria-label="Language">
+        <a href="/imprint/" lang="en" hreflang="en" aria-current="page">EN</a>
+        <a href="/impressum/" lang="de" hreflang="de" title="Deutsch">DE</a>
+        <a href="/ru/imprint/" lang="ru" hreflang="ru" title="Русский">RU</a>
+      </nav>
+      <a class="btn btn-small" href="https://github.com/onyx-clips/onyx-clips.github.io/releases/latest/download/Onyx-Setup.exe">Download</a>
+    </div>
+  </header>
+  <main class="wrap legal">
+    <span class="kicker">Legal</span>
+    <h1 class="chrome">Legal notice</h1>
+    <p>Information according to § 5 DDG (German Digital Services Act). The German version (<a href="/impressum/">Impressum</a>) is the binding one.</p>
+    <p>Christoph Weimann<br>Wilhelm-Leuschner-Straße 21<br>65824 Schwalbach am Taunus<br>Germany</p>
+    <h2 id="contact">Contact</h2>
+    <p>E-mail: <a href="mailto:hilfe.ultrabot@gmail.com">hilfe.ultrabot@gmail.com</a></p>
+    <!-- contact:start  tools/server/build-pages.ps1 points the form at the server's HTTPS address, or leaves it out while there is none -->
+    <p>Or use the contact form, we'll answer you by e-mail:</p>
+    <form class="contact" id="contactForm" action="https://onyx-clips.duckdns.org:8443/api/contact" method="post">
+      <div class="contact-row">
+        <label class="field"><span>Name <i>(optional)</i></span><input name="name" maxlength="100" autocomplete="name"></label>
+        <label class="field"><span>E-mail for the answer</span><input name="email" type="email" maxlength="254" required autocomplete="email"></label>
+      </div>
+      <label class="field"><span>Message</span><textarea name="message" rows="6" minlength="10" maxlength="4000" required></textarea></label>
+      <div class="hp" aria-hidden="true"><label>Please leave empty <input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <p class="fine">Your details go encrypted to our own server and are only stored to answer you, for 6 months at most. More in the <a href="/privacy/#contact">privacy policy</a>.</p>
+      <div class="contact-send">
+        <button class="btn btn-primary" type="submit">Send message</button>
+        <p class="contact-status" role="status" aria-live="polite" hidden></p>
+      </div>
+    </form>
+    <!-- contact:end -->
+    <h2>Responsible for the content</h2>
+    <p>Christoph Weimann, address as above</p>
+  </main>
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <span>© 2026 Onyx</span>
+      <nav aria-label="Legal"><a href="/imprint/">Legal notice</a><a href="/privacy/">Privacy</a></nav>
+    </div>
+  </footer>
+  <script src="/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://onyx-clips.duckdns.org:8443; object-src 'none'; base-uri 'none'; form-action 'self' https://onyx-clips.duckdns.org:8443">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy – Onyx</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="/" aria-label="Onyx home">
+        <svg class="gem" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2 21 9.1 12 21.8 3 9.1Z" fill="#d9d9e0"/><path d="M3 9.1h18L12 21.8Z" fill="#000" fill-opacity=".3"/></svg>
+        <span>Onyx</span>
+      </a>
+      <nav class="langs" aria-label="Language">
+        <a href="/privacy/" lang="en" hreflang="en" aria-current="page">EN</a>
+        <a href="/datenschutz/" lang="de" hreflang="de" title="Deutsch">DE</a>
+        <a href="/ru/privacy/" lang="ru" hreflang="ru" title="Русский">RU</a>
+      </nav>
+      <a class="btn btn-small" href="https://github.com/onyx-clips/onyx-clips.github.io/releases/latest/download/Onyx-Setup.exe">Download</a>
+    </div>
+  </header>
+  <main class="wrap legal">
+    <span class="kicker">Legal</span>
+    <h1 class="chrome">Privacy</h1>
+    <p>This is a translation for your convenience; the German version (<a href="/datenschutz/">Datenschutz</a>) is the binding one.</p>
+
+    <h2>Who is responsible</h2>
+    <p>Christoph Weimann, Wilhelm-Leuschner-Straße 21, 65824 Schwalbach am Taunus, Germany, e-mail: <a href="mailto:hilfe.ultrabot@gmail.com">hilfe.ultrabot@gmail.com</a></p>
+
+    <h2>This website</h2>
+    <p>The website is hosted on GitHub Pages (GitHub, Inc., USA), and the download also comes from GitHub. When you visit the site or download Onyx, GitHub processes technically necessary data such as your IP address to deliver pages and files and to protect against attacks; data may go to the USA in the process (<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>). Of this we only see the number of downloads that GitHub shows publicly.</p>
+    <p>There are no cookies for visitors, no ads, no tracking and no fonts, videos or scripts from other servers. The statistics page on our server is only for the operator; whoever signs in there gets a technically necessary cookie for the sign-in.</p>
+    <!-- contact:start  tools/server/build-pages.ps1 leaves this out together with the form -->
+
+    <h2 id="contact">Contact form</h2>
+    <p>When you write to us through the contact form in the legal notice, your e-mail address, your message and, if given, your name go encrypted (HTTPS) to our own server and are stored there so we can answer you. Your IP address is not stored; it is only kept briefly in memory to fend off too many messages. The legal basis is our legitimate interest in answering enquiries (Art. 6(1)(f) GDPR), for questions about a contract Art. 6(1)(b) GDPR. We delete the message as soon as it is dealt with, after 6 months at the latest.</p>
+    <p>The address of our server is provided by the free name service DuckDNS. It only translates the name into the server's address; your message does not go through DuckDNS.</p>
+    <!-- contact:end -->
+
+    <h2>The Onyx app</h2>
+    <p>Onyx records on your PC and keeps the clips only there. Clips, names, files or settings are never transferred. The only things that go online are:</p>
+    <ul>
+      <li><b>Connection for news:</b> While Onyx is running, it keeps a connection to our server open. Over it the server reports at once when there is a new version or a new message. Onyx sends nothing over it. Your IP address is only kept in memory while the connection lasts (to fend off too many connections from one address) and is not stored.</li>
+      <li><b>Update check:</b> At the start and as soon as our server reports a new version (otherwise every few hours), Onyx asks whether there is a new version and downloads it when needed. Nothing about you is sent. New versions may also be rolled out step by step: when your installation's turn comes, Onyx works out on your PC from a random ID, which is not sent for this. In the settings under “Updates” you can switch off automatic updates or switch on “Beta versions” (then Onyx also asks for test versions).</li>
+      <li><b>Messages:</b> Onyx fetches short notes from us at the start and as soon as the server reports a new one, encrypted (HTTPS), and shows each one once. Nothing about you is sent.</li>
+      <li><b>Error reports</b> (can be switched off under Settings → Updates &amp; privacy): If something goes wrong in Onyx, it sends the Onyx version, the Windows version, the kind of encoder, which area it is about (e.g. recording or saving) and the error message. Paths, your Windows user name, the name of your PC, e-mail and IP addresses are removed from the report on your PC first. There is no ID, no clips and no files. At most ten reports a day; the server only counts identical reports up and deletes them 90 days after they last came.</li>
+      <li><b>Anonymous usage statistics</b> (can be switched off under Settings → Updates &amp; privacy): While Onyx is running, it sends every 5 minutes a random ID, which is created on your PC at the first start and reveals nothing about you or your PC, the Onyx version, the Windows version, the kind of encoder (NVIDIA, AMD, Intel or processor) and how many clips were saved since the last time (just the number). From this the server counts how many people use Onyx right now and per day. The IP address is not stored (it is only kept in memory for a few minutes to fend off too many requests).</li>
+    </ul>
+    <p>The connections to our server are encrypted (HTTPS) as long as it can be reached under its name; otherwise they go over the plain address, as with older Onyx versions. Updates are digitally signed, so nobody can slip in a different program that way either. The legal basis is our legitimate interest in keeping the app working and improving it (Art. 6(1)(f) GDPR). For each ID the server only keeps the version, Windows version, encoder, the number of reported clips and when it was first and last seen. IDs not seen for 13 months and daily counts older than 13 months are deleted.</p>
+
+    <h2>Your rights</h2>
+    <p>You have the right to information, correction, deletion and restriction of processing, as well as the right to object and to lodge a complaint with a data protection supervisory authority. Just write to us at the e-mail address above. Statistics and error reports contain nothing that identifies you; as a rule we therefore cannot link single entries there to a person. Switch both off in the app, and nothing more of it is sent.</p>
+  </main>
+  <footer class="foot">
+    <div class="wrap foot-inner">
+      <span>© 2026 Onyx</span>
+      <nav aria-label="Legal"><a href="/imprint/">Legal notice</a><a href="/privacy/">Privacy</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
