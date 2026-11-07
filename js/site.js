@@ -20,7 +20,7 @@
   }).catch(function () { /* the button still works */ });
 
   // Sections rise in once
-  var targets = document.querySelectorAll('.step, .feature, .card, .perf-inner, .trust-card, .faq details, .download-card, .more li');
+  var targets = document.querySelectorAll('.step, .showcase-frame, .feature, .perf-inner, .trust-card, .faq details, .download-card, .more li');
   if ('IntersectionObserver' in window) {
     var seen = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
@@ -32,14 +32,26 @@
     targets.forEach(function (el) { el.classList.add('reveal'); seen.observe(el); });
   }
 
-  // The hero video plays only while it is on screen (saves battery and data)
-  var video = document.querySelector('.phone-video');
-  if (video && 'IntersectionObserver' in window) {
-    new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) { var p = video.play(); if (p && p.catch) p.catch(function () {}); }
-        else video.pause();
+  // The videos play only while they are on screen (saves battery and data; the showcase only loads then);
+  // a click on the showcase stops it and starts it again
+  document.querySelectorAll('.phone-video, .showcase-video').forEach(function (video) {
+    var stopped = false;
+    var play = function () { var p = video.play(); if (p && p.catch) p.catch(function () {}); };
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting && !stopped) play();
+          else if (!e.isIntersecting) video.pause();
+        });
+      }, { threshold: 0.2 }).observe(video);
+    } else if (!stopped) {
+      play();
+    }
+    if (video.classList.contains('showcase-video')) {
+      video.addEventListener('click', function () {
+        stopped = !video.paused;
+        if (stopped) video.pause(); else play();
       });
-    }, { threshold: 0.2 }).observe(video);
-  }
+    }
+  });
 })();

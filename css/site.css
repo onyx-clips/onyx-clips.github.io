@@ -132,6 +132,14 @@ kbd {
 .step h3 { margin: 8px 0 8px; font: 700 22px var(--font-display); }
 .step p { margin: 0; color: var(--text-2); font-size: 15px; }
 
+/* ───────── Showcase video ───────── */
+.showcase { padding: 8px 0 64px; }
+.showcase-frame {
+  margin: 0; aspect-ratio: 16 / 9; border-radius: var(--r); overflow: hidden; background: #000; cursor: pointer;
+  box-shadow: 0 0 0 1px var(--line-2), 0 40px 120px rgba(0, 0, 0, 0.6);
+}
+.showcase-video { display: block; width: 100%; height: 100%; object-fit: cover; }
+
 /* ───────── Features ───────── */
 .section-head { margin-bottom: 40px; }
 .section-head h2, .perf h2, .trust h2, .download h2 { margin: 12px 0 0; font: 700 clamp(32px, 4.2vw, 52px)/1.06 var(--font-display); }
