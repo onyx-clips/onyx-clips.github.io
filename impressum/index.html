@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://onyx-clips.duckdns.org:8443; object-src 'none'; base-uri 'none'; form-action 'self' https://onyx-clips.duckdns.org:8443">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Impressum – Onyx</title>
@@ -26,6 +26,22 @@
     <p><span class="todo">[Vor- und Nachname]</span><br><span class="todo">[Straße Hausnummer]</span><br><span class="todo">[PLZ Ort]</span><br>Deutschland</p>
     <h2 id="kontakt">Kontakt</h2>
     <p>E-Mail: <span class="todo">[E-Mail-Adresse]</span></p>
+    <!-- contact:start  tools/server/build-pages.ps1 points the form at the server's HTTPS address, or leaves it out while there is none -->
+    <p>Oder über das Kontaktformular, wir antworten dir per E-Mail:</p>
+    <form class="contact" id="contactForm" action="https://onyx-clips.duckdns.org:8443/api/contact" method="post">
+      <div class="contact-row">
+        <label class="field"><span>Name <i>(freiwillig)</i></span><input name="name" maxlength="100" autocomplete="name"></label>
+        <label class="field"><span>E-Mail für die Antwort</span><input name="email" type="email" maxlength="254" required autocomplete="email"></label>
+      </div>
+      <label class="field"><span>Nachricht</span><textarea name="message" rows="6" minlength="10" maxlength="4000" required></textarea></label>
+      <div class="hp" aria-hidden="true"><label>Bitte leer lassen <input name="website" tabindex="-1" autocomplete="off"></label></div>
+      <p class="fine">Deine Angaben gehen verschlüsselt an unseren eigenen Server und werden nur gespeichert, um dir zu antworten, höchstens 6 Monate. Mehr dazu im <a href="/datenschutz/#kontakt">Datenschutz</a>.</p>
+      <div class="contact-send">
+        <button class="btn btn-primary" type="submit">Nachricht senden</button>
+        <p class="contact-status" role="status" aria-live="polite" hidden></p>
+      </div>
+    </form>
+    <!-- contact:end -->
     <h2>Verantwortlich für den Inhalt</h2>
     <p><span class="todo">[Vor- und Nachname, Anschrift wie oben]</span></p>
   </main>

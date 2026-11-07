@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' https://onyx-clips.duckdns.org:8443; object-src 'none'; base-uri 'none'; form-action 'self' https://onyx-clips.duckdns.org:8443">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Datenschutz – Onyx</title>
@@ -29,6 +29,12 @@
     <h2>Diese Website</h2>
     <p>Die Website liegt bei GitHub Pages (GitHub, Inc., USA), und der Download kommt ebenfalls von GitHub. Wenn du die Seite aufrufst oder Onyx herunterlädst, verarbeitet GitHub technisch nötige Daten wie deine IP-Adresse, um Seiten und Dateien auszuliefern und vor Angriffen zu schützen; dabei können Daten in die USA gehen (<a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement">Datenschutzerklärung von GitHub</a>). Wir selbst sehen davon nur die Zahl der Downloads, die GitHub öffentlich anzeigt.</p>
     <p>Es gibt keine Cookies für Besucher, keine Werbung, kein Tracking und keine Schriften, Videos oder Skripte von fremden Servern. Die Statistik-Seite auf unserem Server ist nur für den Betreiber; wer sich dort anmeldet, bekommt ein technisch notwendiges Cookie für die Anmeldung.</p>
+    <!-- contact:start  tools/server/build-pages.ps1 leaves this out together with the form -->
+
+    <h2 id="kontakt">Kontaktformular</h2>
+    <p>Wenn du uns über das Kontaktformular im Impressum schreibst, gehen deine E-Mail-Adresse, deine Nachricht und, falls angegeben, dein Name verschlüsselt (HTTPS) an unseren eigenen Server und werden dort gespeichert, damit wir dir antworten können. Deine IP-Adresse wird dabei nicht gespeichert; sie liegt nur kurz im Arbeitsspeicher, um zu viele Nachrichten abzuwehren. Rechtsgrundlage ist unser berechtigtes Interesse, Anfragen zu beantworten (Art. 6 Abs. 1 lit. f DSGVO), bei Fragen zu einem Vertrag Art. 6 Abs. 1 lit. b DSGVO. Wir löschen die Nachricht, sobald sie erledigt ist, spätestens nach 6 Monaten.</p>
+    <p>Die Adresse unseres Servers stellt der kostenlose Namensdienst DuckDNS bereit. Er übersetzt nur den Namen in die Server-Adresse; deine Nachricht geht nicht über DuckDNS.</p>
+    <!-- contact:end -->
 
     <h2>Die App Onyx</h2>
     <p>Onyx nimmt auf deinem PC auf und speichert die Clips nur dort. Clips, Namen, Dateien oder Einstellungen werden nie übertragen. Ins Internet geht nur:</p>
